@@ -26,16 +26,6 @@ button,
 
 @media #{$mobile} {
 
-  // button,
-  // a {
-  //   cursor: pointer;
-  //   outline: none;
-  // }
-
-  // nav a:hover {
-  //   color: #66BB6A;
-  // }
-
   nav a:active {
     color: #66BB6A;
 
@@ -178,6 +168,12 @@ button,
     margin: 36px auto;
   }
 
+}
+
+@media #{$tablet} {
+  a {
+    text-transform: uppercase;
+  }
 }
 
 @media #{$desktop} {

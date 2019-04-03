@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { createGlobalStyle } from 'styled-components';
 
 import store from './store';
-import App from './components/App';
+import Header from './components/Header/Header';
 import reset from './constants/css/reset';
 
 const GlobalStyle = createGlobalStyle`${reset}`;
@@ -15,7 +15,7 @@ ReactDOM.render(
     <BrowserRouter>
         <Fragment>
             <Provider store={store}>
-                <App />
+                <Header />
             </Provider>
             <GlobalStyle />
         </Fragment>
