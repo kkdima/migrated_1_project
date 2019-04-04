@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Chivo');
+@import url('https://fonts.googleapis.com/css?family=Chivo:300,400,700');
 
 $mobile: "(max-width: 767px)";
 $tablet: "(min-width: 768px) and (max-width: 1023px)";
@@ -15,7 +15,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Chivo;
+  font-family: 'Chivo', sans-serif;
 }
 
 button,
@@ -145,14 +145,14 @@ button,
   .textHeader {
     justify-content: flex-end;
     margin-top: 50px;
-    font-family: Chivo-Bold;
+    font-family: 'Chivo-Bold', sans-serif;
     font-size: 30px;
     color: #000000;
     line-height: 64px;
   }
 
   .textParagraph {
-    font-family: Chivo-Regular;
+    font-family: 'Chivo', sans-serif;
     font-size: 18px;
     color: #263238;
     text-align: left;

@@ -70,7 +70,7 @@ const InfoBlock = styled.div`
 `;
 const H1 = styled.h1`
   @media ${device.mobile} {
-    font-family: Chivo-Bold;
+    font-family: 'Chivo', sans-serif;
     font-size: 37px;
     color: #000000;
     line-height: 64px;
@@ -83,7 +83,7 @@ const H1 = styled.h1`
 
 const P = styled.p`
   @media ${device.mobile} {
-    -family: Chivo-Regular;
+    font-family: 'Chivo', sans-serif;
     font-size: 18px;
     color: #263238;
     text-align: left;

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import '../../styles/styles.scss';
 import { device } from '../../theme/GlobalStyle';
 import InfoBox1 from '../../images/InfoBox1.png';
 import InfoBox2 from '../../images/InfoBox2.png';
@@ -7,7 +8,7 @@ import InfoBox3 from '../../images/InfoBox3.png';
 import background from '../../images/background.png';
 
 export default () => (
-    <SeconSectionContainer>
+    <SecondSectionContainer>
         <Img src={background}/>
         <SecondSectionParagraph>
             <H2>New Opportunities</H2>
@@ -31,7 +32,7 @@ export default () => (
             </InfoBox>
         </InfoBoxContainer>
         <Line></Line>
-    </SeconSectionContainer>
+    </SecondSectionContainer>
 );
 
 // STYLES STYLES STYLES STYLES STYLES STYLES :
@@ -40,7 +41,7 @@ export default () => (
 // STYLES STYLES STYLES STYLES STYLES STYLES :
 // STYLES STYLES STYLES STYLES STYLES STYLES :
 
-const SeconSectionContainer = styled.div`
+const SecondSectionContainer = styled.div`
   @media ${device.mobile} {
     display: flex;
     flex-flow: column;
@@ -71,7 +72,7 @@ const SecondSectionParagraph = styled.div`
 
 const H2 = styled.h2`
   @media ${device.mobile} {
-    font-family: Chivo-Bold;
+    font-family: 'Chivo', sans-serif;
     font-size: 36px;
     color: #000000;
     text-align: center;
@@ -85,7 +86,7 @@ const H2 = styled.h2`
 
 const P = styled.p`
   @media ${device.mobile} {
-    font-family: Chivo-Regular;
+    font-family: 'Chivo', sans-serif;
     font-size: 18px;
     color: #324148;
     text-align: center;
@@ -150,7 +151,8 @@ const InfoBoxGreen = styled(InfoBox)`
 
 const Pbox = styled.p`
   @media ${device.mobile} {
-    font-family: Chivo-Light;
+    font-family: 'Chivo', sans-serif;
+    font-weight: lighter;
     font-size: 16px;
     color: #263238;
     line-height: 24px;
@@ -166,6 +168,7 @@ const H3 = styled.h3`
   @media ${device.mobile} {
     padding: 25px 0px;
     font-family: 'Chivo', sans-serif;
+    font-weight:bold;
     font-size: 18px;
     color: #263238;
     text-align: left;
