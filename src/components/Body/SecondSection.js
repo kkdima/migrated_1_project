@@ -73,6 +73,7 @@ const SecondSectionParagraph = styled.div`
 const H2 = styled.h2`
   @media ${device.mobile} {
     font-family: 'Chivo', sans-serif;
+    font-weight: bold;
     font-size: 36px;
     color: #000000;
     text-align: center;
@@ -168,6 +169,7 @@ const H3 = styled.h3`
   @media ${device.mobile} {
     padding: 25px 0px;
     font-family: 'Chivo', sans-serif;
+    font-weight: bold;
     font-weight:bold;
     font-size: 18px;
     color: #263238;

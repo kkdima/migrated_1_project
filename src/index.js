@@ -9,6 +9,7 @@ import store from './store';
 import Header from './components/Header/Header';
 import FirstSection from './components/Body/FirstSection';
 import SecondSection from './components/Body/SecondSection';
+import ThirdSection from './components/Body/ThirdSection';
 import reset from './constants/css/reset';
 
 const GlobalStyle = createGlobalStyle`${reset}`;
@@ -20,6 +21,7 @@ ReactDOM.render(
                 <Header />
                 <FirstSection />
                 <SecondSection />
+                <ThirdSection />
             </Provider>
             <GlobalStyle />
         </Fragment>

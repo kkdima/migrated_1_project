@@ -175,6 +175,7 @@ const A = styled.a`
 `;
 
 const Button = styled.button`
+  -webkit-tap-highlight-color: transparent;
   @media ${device.mobile} {
     border: 1px solid white;
     font-family: 'Chivo', sans-serif;

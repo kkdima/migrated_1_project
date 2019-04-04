@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import '../../styles/styles.scss';
 import { device } from '../../theme/GlobalStyle';
 import photobox1 from '../../images/photobox1.png';
 import photobox2 from '../../images/photobox2.png';
@@ -7,68 +8,64 @@ import backgroundImg from '../../images/background_third_section.png';
 
 export default () => (
     <ThirdSectionContainer>
-        <Width1056>
-            <TextContainer>
-                <H2>Invest on your convenience</H2>
-                <P>Autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</P>
-            </TextContainer>
+        <TextContainer>
+            <H2>Invest on your convenience</H2>
+            <P>Autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla</P>
+        </TextContainer>
 
-            <PhotosContainer>
-                <PhotoItem>
-                    <Img src={photobox1}/>
-                    <ColorOverlay></ColorOverlay>
-                    <Text>
-                        <P>NEW FARM TODAY</P>
-                        <Line></Line>
-                        <H2>Short terms investment</H2>
-                        <P>Invest in farms that will be ready for harvest in 3-18 months</P>
-                        <Button data-micron="bounce">Browse Farm</Button>
-                    </Text>
-                </PhotoItem>
-                <PhotoItem>
-                    <Img src={photobox2}/>
-                    <ColorOverlay></ColorOverlay>
-                    <Text>
-                        <P>FULLY FUNDED</P>
-                        <Line></Line>
-                        <H2>Long terms investment</H2>
-                        <P>Consider farms that have long term investment program.</P>
-                        <Button data-micron="bounce">Learn more</Button>
-                    </Text>
-                </PhotoItem>
-            </PhotosContainer>
-        </Width1056>
+        <PhotosContainer>
+            <PhotoItem>
+                <Img src={photobox1}/>
+                <ColorOverlay></ColorOverlay>
+                <Text>
+                    <P>NEW FARM TODAY</P>
+                    <Line></Line>
+                    <H2>Short terms investment</H2>
+                    <P>Invest in farms that will be ready for harvest in 3-18 months</P>
+                    <Button data-micron="bounce">Browse Farm</Button>
+                </Text>
+            </PhotoItem>
+            <PhotoItem>
+                <Img src={photobox2}/>
+                <ColorOverlay></ColorOverlay>
+                <Text>
+                    <P>FULLY FUNDED</P>
+                    <Line></Line>
+                    <H2>Long terms investment</H2>
+                    <P>Consider farms that have long term investment program.</P>
+                    <Button data-micron="bounce">Learn more</Button>
+                </Text>
+            </PhotoItem>
+        </PhotosContainer>
 
-        <HowItWorksBanner src={backgroundImg}>
-            <H2>How it works</H2>
-
-            <P>Take your pick from the supply chain and participate in agribusiness projects that are backed up not only by Zou, but also by the best land, family heritage, innovation and overall superior expertise.</P>
-      
-            <Points>
-                <CircleNumber>
-                    <P id="GreenLetter">01</P>
-                </CircleNumber>
-                <Line id='line'></Line>
-                <CircleNumber>
-                    <P>02</P>
-                </CircleNumber>
-                <Line id='line'></Line>
-                <CircleNumber>
-                    <P>03</P>
-                </CircleNumber>
-                <Line id='line'></Line>
-                <CircleNumber>
-                    <P>04</P>
-                </CircleNumber>
-            </Points>
-
-            <LastParagraph>
-                <H2>Select your farmshare and complete reservation form.</H2>
-                <P>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere</P>
-            </LastParagraph>
-
+        <HowItWorksBanner>
+            {/* <Img2 src={backgroundImg}/> */}
+            <TextPart>
+                <H2>How it works</H2>
+                <P>Take your pick from the supply chain and participate in agribusiness projects that are backed up not only by Zou, but also by the best land, family heritage, innovation and overall superior expertise.</P>
+                <Points>
+                    <CircleNumber>
+                        <P id="GreenLetter">01</P>
+                    </CircleNumber>
+                    <Line id='line'></Line>
+                    <CircleNumber>
+                        <P>02</P>
+                    </CircleNumber>
+                    <Line id='line'></Line>
+                    <CircleNumber>
+                        <P>03</P>
+                    </CircleNumber>
+                    <Line id='line'></Line>
+                    <CircleNumber>
+                        <P>04</P>
+                    </CircleNumber>
+                </Points>
+                <LastParagraph>
+                    <H2>Select your farmshare and complete reservation form.</H2>
+                    <P>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere</P>
+                </LastParagraph>
+            </TextPart>
         </HowItWorksBanner>
-
     </ThirdSectionContainer>
 );
 
@@ -80,6 +77,21 @@ export default () => (
 
 const Img2 = styled.img`
   @media ${device.mobile} {
+    z-index: -1;
+    position: relative;
+  }
+  @media ${device.tablet} {
+  }
+  @media ${device.laptop} {
+  }
+`;
+
+const TextPart = styled.div`
+  @media ${device.mobile} {
+    z-index: 2;
+    position: relative;
+    /* border: solid black; */
+    /* bottom: 600px; */
   }
   @media ${device.tablet} {
   }
@@ -89,19 +101,11 @@ const Img2 = styled.img`
 
 const ThirdSectionContainer = styled.div`
   @media ${device.mobile} {
+    display: flex;
+    flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  @media ${device.tablet} {
-  }
-  @media ${device.laptop} {
-  }
-`;
-
-const Width1056 = styled.div`
-  @media ${device.mobile} {
-    max-width: 1056px;
-    margin: 0 auto;
+    /* border: solid black; */
   }
   @media ${device.tablet} {
   }
@@ -111,31 +115,34 @@ const Width1056 = styled.div`
 
 const TextContainer = styled.div`
   @media ${device.mobile} {
-    margin-left: 20px;
-    margin-right: 20px;
-    max-width: 704px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0px 25px;
     H2, P {
-      text-align: center;
+    }
+    H2 {
+      margin-bottom: 0.8em;
+      line-height: 1.2em;
     }
   }
   @media ${device.tablet} {
+    margin: 0px 72px;
   }
   @media ${device.laptop} {
-    margin: 0;
     H2, P {
       text-align: left;
     }
   }
 `;
+
 const PhotosContainer = styled.div`
   @media ${device.mobile} {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-top: 94px;
-    margin-bottom: 50px;
-
+    margin-bottom: 100px;
   }
   @media ${device.tablet} {
   }
@@ -146,15 +153,22 @@ const PhotosContainer = styled.div`
 
 const PhotoItem = styled.div`
   @media ${device.mobile} {
+    position: relative;
+    /* width: 512px; */
     width: 512px;
     height: 416px;
+
     border-radius: 5px;
     margin: 0 auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    /* background-color: green; */
     :first-child {
       margin-bottom: 50px;
     }
   }
   @media ${device.tablet} {
+    /* width: 512px; */
   }
   @media ${device.laptop} {
     :first-child {
@@ -163,19 +177,24 @@ const PhotoItem = styled.div`
     margin: 0;
   }
 `;
+
 const Text = styled.div`
   @media ${device.mobile} {
     display: flex;
     flex-direction: column;
     z-index: 3;
     position: relative;
-    bottom: 416px;
+    /* bottom: 820px; */
+    padding-left: 67px;
+
+    /* border: solid black; */
+
+    
     P, H2 {
-      font-family: Chivo-Regular;
+      font-family: 'Chivo', sans-serif;
       position: relative;
       max-width: 248px;
       color: #FFFFFF;
-      margin-left: 67px;
     }
     P:first-of-type {
       font-size: 14px;
@@ -192,7 +211,8 @@ const Text = styled.div`
       margin-bottom: 29px;
     }
     H2 {
-      font-family: Chivo-Bold;
+      font-family: 'Chivo', sans-serif;
+      font-weight: bold;
       font-size: 31px;
       text-align: left;
       line-height: 40px;
@@ -203,12 +223,13 @@ const Text = styled.div`
   @media ${device.tablet} {
   }
   @media ${device.laptop} {
+    /* bottom: 820px; */
   }
 `;
 
 const P = styled.p`
   @media ${device.mobile} {
-    font-family: Chivo-Regular;
+    font-family: 'Chivo', sans-serif;
     font-size: 18px;
     color: #324148;
     line-height: 32px;
@@ -256,18 +277,16 @@ const LastParagraph = styled.div`
   @media ${device.mobile} {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
     margin-top: 50px;
-    max-width: 702px;
-    justify-content: space-between;
+    justify-content: center;
     H2, P {
-      text-align: left;
       margin-left: 30px;
       margin-right: 30px;
     }
     H2 {
-      margin-top: 0px;
-      max-width: 280px;
+      /* margin-top: 0px; */
+      /* width: 280px;  */
+      /* max-width: 280px; */
     }
     P {
       max-width: 352px;
@@ -277,12 +296,14 @@ const LastParagraph = styled.div`
   }
   @media ${device.laptop} {
     H2, P {
-      text-align: left;
+      /* text-align: left; */
       margin-left: 0px;
       margin-right: 0px;
     }
-    flex-direction: row;
-    margin-top: 106px;
+    display: flex;
+    justify-content: center;
+    /* flex-direction: row; */
+    /* margin-top: 106px; */
   }
 `;
 
@@ -312,7 +333,8 @@ const CircleNumber = styled.div`
 
 const H2 = styled.h2`
   @media ${device.mobile} {
-    font-family: Chivo-Bold;
+    font-family: 'Chivo', sans-serif;
+    font-weight: bold;
     font-size: 36px;
     line-height: 64px;
     color: #000000;
@@ -327,20 +349,23 @@ const Img = styled.img`
   @media ${device.mobile} {
     position: absolute;
     z-index: 0;
+    height: 416px;
+    object-fit: cover;
   }
   @media ${device.tablet} {
+    max-height: 416px;
   }
   @media ${device.laptop} {
   }
 `;
+
 const ColorOverlay = styled.div`
   @media ${device.mobile} {
-    position: relative;
+    position: absolute;
     z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    bottom: 0px;
+    width: 512px;
+    min-height: 200px;
     opacity: 0.6;
     background-image: linear-gradient(-180deg, rgba(97,118,127,0.00) 0%, #324148 100%);
   }
@@ -357,7 +382,6 @@ const Line = styled.div`
     height: 4px;
     border-radius: 2px;
     position: relative;
-    margin-left: 67px;
   }
   @media ${device.tablet} {
   }
@@ -368,13 +392,12 @@ const Line = styled.div`
 const Button = styled.button`
   @media ${device.mobile} {
     background: #FFFFFF;
-    font-family: Chivo-Regular;
+    font-family: 'Chivo', sans-serif;
     font-size: 18px;
     color: #66BB6A;
     text-align: center;
     line-height: 32px;
     position: relative;
-    margin-left: 67px;
     border-radius: 5px;
     width: 200px;
     height: 48px;
@@ -384,25 +407,22 @@ const Button = styled.button`
   @media ${device.laptop} {
   }
 `;
+
 const HowItWorksBanner = styled.div`
   @media ${device.mobile} {
-    margin: 117px 30px 0px;
-    height: 720px;
+    background-color: #66BB6A;
     border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    padding: 106px 30px 0 30px;
-    background-repeat: no-repeat;
-    margin: 0 auto;
+    padding-top: 50px;
     H2 {
-      font-family: Chivo-Bold;
+      font-family: 'Chivo', sans-serif;
+      font-weight: bold;
       color: #FFFFFF;
       text-align: center;
       line-height: 64px;
       margin-bottom: 12px;
     }
     P {
-      font-family: Chivo-Regular;
+      font-family: 'Chivo', sans-serif;
       color: #E8F5E9;
       text-align: center;
       margin: 0 auto;
@@ -411,11 +431,20 @@ const HowItWorksBanner = styled.div`
       margin-bottom: 0px;
     }
     H2:last-of-type {
-      font-family: Chivo-Bold;
+      font-family: 'Chivo', sans-serif;
+      font-weight: bold;
       font-size: 24px;
       color: #FFFFFF;
       line-height: 32px;
     }
+  }
+  @media ${device.mobileL} {
+    margin: 117px 30px 0px;
+    height: 720px;
+    
+    display: flex;
+    flex-direction: column;
+    padding: 103px 30px 0 30px;
   }
   @media ${device.tablet} {
   }

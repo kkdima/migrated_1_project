@@ -62,8 +62,6 @@ const InfoBlock = styled.div`
     margin-left: 50px;
   }
   @media ${device.laptop} {
-    /* margin-left: 120px;  */
-    /* margin: 0 auto; */
     margin-top: 70px;
     max-width: 1200px;
   }
