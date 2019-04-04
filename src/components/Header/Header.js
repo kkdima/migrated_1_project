@@ -5,39 +5,80 @@ import '../../styles/styles.scss';
 import MainIllustration from '../../images/MainIllustration.png';
 import img from '../../images/logo.png';
 
+export default () => (
+    <Container>
+        <Wrapper>
+            <LogoNavHolder>
+                <Logo src={img} id="logo"/>
+                <Ul>
+                    <Li><A ahref="#">Home</A></Li>
+                    <Li><A ahref="#">Product</A></Li>
+                    <Li><A ahref="#">Team</A></Li>
+                    <Li><A ahref="#">Blog</A></Li>
+                    <Li><A ahref="#">Contact</A></Li>
+                </Ul>
+            </LogoNavHolder>
+            <LogoNavHolder2>
+                <Button data-micron="bounce">Sign Up</Button>
+                <Img src={MainIllustration} id="illustration"></Img>
+            </LogoNavHolder2>
+        </Wrapper>
+    </Container>
+);
+
+// STYLES STYLES STYLES STYLES STYLES STYLES :
+// STYLES STYLES STYLES STYLES STYLES STYLES :
+// STYLES STYLES STYLES STYLES STYLES STYLES :
+// STYLES STYLES STYLES STYLES STYLES STYLES :
+// STYLES STYLES STYLES STYLES STYLES STYLES :
+
 const Container = styled.div`
   @media ${device.mobile} {
     display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
     align-items: flex-start;
     justify-content: space-between;
-    max-width: 1200px;
     font-family: 'Chivo', sans-serif;
     /* font-size: 1.2em; */
     color: #000000;
-    margin: 0 auto;
   }
   @media ${device.tablet} {
   }
   @media ${device.laptop} {
     font-size: 1em;
-    margin-left: 120px;
+    justify-content: center;
   }
 `;
 
 const Wrapper = styled.div`
   display: flex;
-  align-items: space-between;
+  justify-content: center;
+  /* margin: 0 auto; */
+  /* align-items: space-between; */
   @media ${device.laptop} {
     justify-content: flex-start;
+
   }
-`;
+  `;
 
 const LogoNavHolder = styled.div`
   display: flex;
   align-items: flex-start;
   max-width: 615px;
   @media ${device.laptop} {
-    justify-content: space-between;
+    justify-content: center;
+    position: relative;
+    right: 300px;
+    }
+  `;
+
+const LogoNavHolder2 = styled.div`
+  @media ${device.mobile} {
+  }
+  @media ${device.tablet} {
+  }
+  @media ${device.laptop} {
   }
 `;
 
@@ -51,8 +92,8 @@ const Logo = styled.img`
   }
   @media ${device.laptop} {
     display: flex;
-    right: 0;
-    margin-right: 117px;
+    /* right: 0; */
+    /* margin-right: 117px; */
   }
 `;
 
@@ -61,16 +102,17 @@ const Ul = styled.ul`
     flex-direction: column;
     margin-top: 37px;
     position: relative;
-    left: 10px;
+    left: 30px;
   }
   @media ${device.tablet} {
+    left: 50px;
   }
   @media ${device.laptop} {
     display: flex;
     flex-direction: row;
     margin-top: 57px;
     position: relative;
-    right: 100px;
+    /* right: 100px; */
   }
 `;
 
@@ -229,24 +271,3 @@ const Img = styled.img`
 //   z-index: -1;
 //   max-width: 660px;
 // `;
-
-const App = () => (
-    <Container>
-        <Wrapper>
-            <LogoNavHolder>
-                <Logo src={img} id="logo"/>
-                <Ul>
-                    <Li><A ahref="#">Home</A></Li>
-                    <Li><A ahref="#">Product</A></Li>
-                    <Li><A ahref="#">Team</A></Li>
-                    <Li><A ahref="#">Blog</A></Li>
-                    <Li><A ahref="#">Contact</A></Li>
-                </Ul>
-            </LogoNavHolder>
-            <Button data-micron="bounce">Sign Up</Button>
-            <Img src={MainIllustration} id="illustration"></Img>
-        </Wrapper>
-    </Container>
-);
-
-export default App;

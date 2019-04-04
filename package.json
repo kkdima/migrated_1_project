@@ -14,7 +14,7 @@
         "cypress:open": "cypress open",
         "precommit": "yarn run lint && yarn test",
         "prepush": "yarn run lint",
-        "deploy": "gh-pages -d build"
+        "deploy": "npm run build && gh-pages -d build"
     },
     "keywords": [
         "react",
