@@ -1,51 +1,38 @@
-import React from 'react'
-import { device } from '../../theme/GlobalStyle';
+import React from 'react';
 import styled from 'styled-components';
+import { device } from '../../theme/GlobalStyle';
 import InfoBox1 from '../../images/InfoBox1.png';
 import InfoBox2 from '../../images/InfoBox2.png';
 import InfoBox3 from '../../images/InfoBox3.png';
 import background from '../../images/background.png';
-  
 
-export default class SecondSection extends React.Component {
-  render() {
-    return (
-      <SeconSectionContainer>
+export default () => (
+    <SeconSectionContainer>
         <Img src={background}/>
-
-
         <SecondSectionParagraph>
-          <H2>New Opportunities</H2>
-          <P>We are the first and the only crowdfunding platform enabling you to help finance our farmers.</P>
+            <H2>New Opportunities</H2>
+            <P>We are the first and the only crowdfunding platform enabling you to help finance our farmers.</P>
         </SecondSectionParagraph>
-
         <InfoBoxContainer>
-
-          <InfoBox>
-            <ImgBox src={InfoBox1} />
-            <H3>Connect with our farmers</H3>
-            <Pbox>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione</Pbox>
-          </InfoBox>
-
-          <InfoBoxGreen>
-            <ImgBox src={InfoBox2} />
-            <H3>Connect with our farmers</H3>
-            <Pbox>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione</Pbox>
-          </InfoBoxGreen>
-
-          <InfoBox>
-            <ImgBox src={InfoBox3} />
-            <H3>Connect with our farmers</H3>
-            <Pbox>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione</Pbox>
-          </InfoBox>
-
+            <InfoBox>
+                <ImgBox src={InfoBox1} />
+                <H3>Connect with our farmers</H3>
+                <Pbox>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione</Pbox>
+            </InfoBox>
+            <InfoBoxGreen>
+                <ImgBox src={InfoBox2} />
+                <H3>Connect with our farmers</H3>
+                <Pbox>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione</Pbox>
+            </InfoBoxGreen>
+            <InfoBox>
+                <ImgBox src={InfoBox3} />
+                <H3>Connect with our farmers</H3>
+                <Pbox>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione</Pbox>
+            </InfoBox>
         </InfoBoxContainer>
         <Line></Line>
-
-      </SeconSectionContainer>
-    )
-  }
-};
+    </SeconSectionContainer>
+);
 
 // STYLES STYLES STYLES STYLES STYLES STYLES :
 // STYLES STYLES STYLES STYLES STYLES STYLES :
@@ -53,7 +40,7 @@ export default class SecondSection extends React.Component {
 // STYLES STYLES STYLES STYLES STYLES STYLES :
 // STYLES STYLES STYLES STYLES STYLES STYLES :
 
-export const SeconSectionContainer = styled.div`
+const SeconSectionContainer = styled.div`
   @media ${device.mobile} {
     display: flex;
     flex-flow: column;
@@ -64,22 +51,25 @@ export const SeconSectionContainer = styled.div`
   @media ${device.laptop} {
     margin-top: 228px; 
   }
-`
-export const SecondSectionParagraph = styled.div`
+`;
+
+const SecondSectionParagraph = styled.div`
   @media ${device.mobile} {
     display: flex;
     flex-flow: column;
     max-width: 552px;
     justify-content: center;
     margin: 0 auto;
+    margin-top: 80px;
   }
   @media ${device.tablet} {
   }
   @media ${device.laptop} {
+    margin: 0 auto;
   }
-`
+`;
 
-export const H2 = styled.h2`
+const H2 = styled.h2`
   @media ${device.mobile} {
     font-family: Chivo-Bold;
     font-size: 36px;
@@ -91,8 +81,9 @@ export const H2 = styled.h2`
   }
   @media ${device.laptop} {
   }
-`
-export const P = styled.p`
+`;
+
+const P = styled.p`
   @media ${device.mobile} {
     font-family: Chivo-Regular;
     font-size: 18px;
@@ -106,8 +97,9 @@ export const P = styled.p`
   }
   @media ${device.laptop} {
   }
-`
-export const InfoBoxContainer = styled.div`
+`;
+
+const InfoBoxContainer = styled.div`
   @media ${device.mobile} {
     display: flex;
     flex-flow: column;
@@ -119,9 +111,9 @@ export const InfoBoxContainer = styled.div`
   @media ${device.laptop} {
     flex-flow: row;
   }
-`
+`;
 
-export const InfoBox = styled.div`
+const InfoBox = styled.div`
   @media ${device.mobile} {
     background: #FFFFFF;
     box-shadow: -1px 13px 20px 0 #F0F2F4;
@@ -129,14 +121,20 @@ export const InfoBox = styled.div`
     max-width: 328px;
     min-height: 328px;
     border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+    align-content: space-between;
+    padding: 46px 25px;
   }
   @media ${device.tablet} {
 
   }
   @media ${device.laptop} {
   }
-`
-export const InfoBoxGreen = styled(InfoBox)`
+`;
+
+const InfoBoxGreen = styled(InfoBox)`
   h3, p {
     color: #FFFFFF;
   }
@@ -148,13 +146,10 @@ export const InfoBoxGreen = styled(InfoBox)`
   }
   @media ${device.laptop} {
   }
-`
+`;
 
-export const Pbox = styled.p`
+const Pbox = styled.p`
   @media ${device.mobile} {
-    margin-left: 48px;
-    margin-right: 32px;
-    margin-bottom: 50px;
     font-family: Chivo-Light;
     font-size: 16px;
     color: #263238;
@@ -165,13 +160,12 @@ export const Pbox = styled.p`
   }
   @media ${device.laptop} {
   }
-`
+`;
 
-export const H3 = styled.h3`
+const H3 = styled.h3`
   @media ${device.mobile} {
-    margin-left: 48px;
-    margin-right: 32px;
-    font-family: Chivo-Bold;
+    padding: 25px 0px;
+    font-family: 'Chivo', sans-serif;
     font-size: 18px;
     color: #263238;
     text-align: left;
@@ -181,34 +175,33 @@ export const H3 = styled.h3`
   }
   @media ${device.laptop} {
   }
-`
-export const ImgBox = styled.img`
+`;
+
+const ImgBox = styled.img`
   @media ${device.mobile} {
-    margin-left: 48px;
-    margin-top: 49px;
   }
   @media ${device.tablet} {
   }
   @media ${device.laptop} {
   }
-`
+`;
 
-export const Img = styled.img`
+const Img = styled.img`
   @media ${device.mobile} {
     position: absolute;
     z-index: -2;
     top: 1000px;
     background: #ffffff;
     width: 100%;
-    /* box-shadow: 0 -18px 52px 30px rgba(245,245,245,0.9); */
   }
   @media ${device.tablet} {
     top: 840px;
   }
   @media ${device.laptop} {
   }
-`
-export const Line = styled.div`
+`;
+
+const Line = styled.div`
   @media ${device.mobile} {
     width: 100%;
     max-width: 1200px;
@@ -222,4 +215,4 @@ export const Line = styled.div`
   }
   @media ${device.laptop} {
   }
-`
+`;

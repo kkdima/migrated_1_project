@@ -210,7 +210,6 @@ const Img = styled.img`
   #illustration {
     position: relative;
     width: 55%;
-    /* max-width: 500px; */
     top: 0;
     right: 0;
     z-index: -1;
@@ -221,18 +220,17 @@ const Img = styled.img`
     margin: 45px 10px 10px;
     margin-right: 117px;
   }
+
   @media ${device.mobile} {
     width: 50%;
     /* max-width: 660px; */
   }
   @media ${device.mobileL} {
-    /* width: 60%; */
   }
   @media ${device.tablet} {
     width: 40%;
     #illustration {
       width: 50%;
-      /* max-width: 660px; */
       position: absolute;
       top: 0;
       right: 0;
@@ -240,13 +238,8 @@ const Img = styled.img`
     }
   }
   @media ${device.laptop} {
+    width: 620px;
     #illustration {
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: -1;
-      max-width: 410px;
-      width: 60%;
     }
   }
 `;

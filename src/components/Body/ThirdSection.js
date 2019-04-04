@@ -1,76 +1,76 @@
-import React from 'react'
-import { device } from '../../theme/GlobalStyle';
+import React from 'react';
 import styled from 'styled-components';
+import { device } from '../../theme/GlobalStyle';
 import photobox1 from '../../images/photobox1.png';
 import photobox2 from '../../images/photobox2.png';
-import backgroundImg from '../../images/background_third_section.png'
+import backgroundImg from '../../images/background_third_section.png';
 
 export default () => (
-  <ThirdSectionContainer>
-    <Width1056>
-      <TextContainer>
-        <H2>Invest on your convenience</H2>
-        <P>Autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</P>
-      </TextContainer>
+    <ThirdSectionContainer>
+        <Width1056>
+            <TextContainer>
+                <H2>Invest on your convenience</H2>
+                <P>Autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur</P>
+            </TextContainer>
 
-      <PhotosContainer>
-        <PhotoItem>
-          <Img src={photobox1}/>
-          <ColorOverlay></ColorOverlay>
-          <Text>
-            <P>NEW FARM TODAY</P>
-            <Line></Line>
-            <H2>Short terms investment</H2>
-            <P>Invest in farms that will be ready for harvest in 3-18 months</P>
-            <Button data-micron="bounce">Browse Farm</Button>
-          </Text>
-        </PhotoItem>
-        <PhotoItem>
-          <Img src={photobox2}/>
-          <ColorOverlay></ColorOverlay>
-          <Text>
-            <P>FULLY FUNDED</P>
-            <Line></Line>
-            <H2>Long terms investment</H2>
-            <P>Consider farms that have long term investment program.</P>
-            <Button data-micron="bounce">Learn more</Button>
-          </Text>
-        </PhotoItem>
-      </PhotosContainer>
-    </Width1056>
+            <PhotosContainer>
+                <PhotoItem>
+                    <Img src={photobox1}/>
+                    <ColorOverlay></ColorOverlay>
+                    <Text>
+                        <P>NEW FARM TODAY</P>
+                        <Line></Line>
+                        <H2>Short terms investment</H2>
+                        <P>Invest in farms that will be ready for harvest in 3-18 months</P>
+                        <Button data-micron="bounce">Browse Farm</Button>
+                    </Text>
+                </PhotoItem>
+                <PhotoItem>
+                    <Img src={photobox2}/>
+                    <ColorOverlay></ColorOverlay>
+                    <Text>
+                        <P>FULLY FUNDED</P>
+                        <Line></Line>
+                        <H2>Long terms investment</H2>
+                        <P>Consider farms that have long term investment program.</P>
+                        <Button data-micron="bounce">Learn more</Button>
+                    </Text>
+                </PhotoItem>
+            </PhotosContainer>
+        </Width1056>
 
-    <HowItWorksBanner src={backgroundImg}>
-      <H2>How it works</H2>
+        <HowItWorksBanner src={backgroundImg}>
+            <H2>How it works</H2>
 
-      <P>Take your pick from the supply chain and participate in agribusiness projects that are backed up not only by Zou, but also by the best land, family heritage, innovation and overall superior expertise.</P>
+            <P>Take your pick from the supply chain and participate in agribusiness projects that are backed up not only by Zou, but also by the best land, family heritage, innovation and overall superior expertise.</P>
       
-      <Points>
-        <CircleNumber>
-          <P id="GreenLetter">01</P>
-        </CircleNumber>
-        <Line id='line'></Line>
-        <CircleNumber>
-          <P>02</P>
-        </CircleNumber>
-        <Line id='line'></Line>
-        <CircleNumber>
-          <P>03</P>
-        </CircleNumber>
-        <Line id='line'></Line>
-        <CircleNumber>
-          <P>04</P>
-        </CircleNumber>
-      </Points>
+            <Points>
+                <CircleNumber>
+                    <P id="GreenLetter">01</P>
+                </CircleNumber>
+                <Line id='line'></Line>
+                <CircleNumber>
+                    <P>02</P>
+                </CircleNumber>
+                <Line id='line'></Line>
+                <CircleNumber>
+                    <P>03</P>
+                </CircleNumber>
+                <Line id='line'></Line>
+                <CircleNumber>
+                    <P>04</P>
+                </CircleNumber>
+            </Points>
 
-      <LastParagraph>
-        <H2>Select your farmshare and complete reservation form.</H2>
-        <P>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere</P>
-      </LastParagraph>
+            <LastParagraph>
+                <H2>Select your farmshare and complete reservation form.</H2>
+                <P>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere</P>
+            </LastParagraph>
 
-    </HowItWorksBanner>
+        </HowItWorksBanner>
 
-  </ThirdSectionContainer>
-)
+    </ThirdSectionContainer>
+);
 
 // STYLES STYLES STYLES STYLES STYLES STYLES :
 // STYLES STYLES STYLES STYLES STYLES STYLES :
@@ -85,7 +85,7 @@ const Img2 = styled.img`
   }
   @media ${device.laptop} {
   }
-`
+`;
 
 const ThirdSectionContainer = styled.div`
   @media ${device.mobile} {
@@ -96,7 +96,7 @@ const ThirdSectionContainer = styled.div`
   }
   @media ${device.laptop} {
   }
-`
+`;
 
 const Width1056 = styled.div`
   @media ${device.mobile} {
@@ -107,7 +107,7 @@ const Width1056 = styled.div`
   }
   @media ${device.laptop} {
   }
-`
+`;
 
 const TextContainer = styled.div`
   @media ${device.mobile} {
@@ -127,7 +127,7 @@ const TextContainer = styled.div`
       text-align: left;
     }
   }
-`
+`;
 const PhotosContainer = styled.div`
   @media ${device.mobile} {
     display: flex;
@@ -142,7 +142,7 @@ const PhotosContainer = styled.div`
   @media ${device.laptop} {
     flex-direction: row;
   }
-`
+`;
 
 const PhotoItem = styled.div`
   @media ${device.mobile} {
@@ -162,7 +162,7 @@ const PhotoItem = styled.div`
     }
     margin: 0;
   }
-`
+`;
 const Text = styled.div`
   @media ${device.mobile} {
     display: flex;
@@ -204,7 +204,7 @@ const Text = styled.div`
   }
   @media ${device.laptop} {
   }
-`
+`;
 
 const P = styled.p`
   @media ${device.mobile} {
@@ -218,9 +218,7 @@ const P = styled.p`
   }
   @media ${device.laptop} {
   }
-`
-
-
+`;
 
 const Points = styled.div`
   @media ${device.mobile} {
@@ -252,7 +250,7 @@ const Points = styled.div`
       width: 139px;
     }
   }
-`
+`;
 
 const LastParagraph = styled.div`
   @media ${device.mobile} {
@@ -286,8 +284,7 @@ const LastParagraph = styled.div`
     flex-direction: row;
     margin-top: 106px;
   }
-`
-
+`;
 
 const CircleNumber = styled.div`
   @media ${device.mobile} {
@@ -311,7 +308,7 @@ const CircleNumber = styled.div`
   }
   @media ${device.laptop} {
   }
-`
+`;
 
 const H2 = styled.h2`
   @media ${device.mobile} {
@@ -324,7 +321,7 @@ const H2 = styled.h2`
   }
   @media ${device.laptop} {
   }
-`
+`;
 
 const Img = styled.img`
   @media ${device.mobile} {
@@ -335,7 +332,7 @@ const Img = styled.img`
   }
   @media ${device.laptop} {
   }
-`
+`;
 const ColorOverlay = styled.div`
   @media ${device.mobile} {
     position: relative;
@@ -351,7 +348,7 @@ const ColorOverlay = styled.div`
   }
   @media ${device.laptop} {
   }
-`
+`;
 
 const Line = styled.div`
   @media ${device.mobile} {
@@ -366,7 +363,7 @@ const Line = styled.div`
   }
   @media ${device.laptop} {
   }
-`
+`;
 
 const Button = styled.button`
   @media ${device.mobile} {
@@ -386,7 +383,7 @@ const Button = styled.button`
   }
   @media ${device.laptop} {
   }
-`
+`;
 const HowItWorksBanner = styled.div`
   @media ${device.mobile} {
     margin: 117px 30px 0px;
@@ -429,4 +426,4 @@ const HowItWorksBanner = styled.div`
       margin-bottom: 20px;
     }
   }
-`
+`;

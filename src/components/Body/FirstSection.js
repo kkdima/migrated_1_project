@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { device } from '../../theme/GlobalStyle';
+import '../../styles/styles.scss';
 import leaves from '../../images/Leaves.png';
 
 export default () => (
@@ -98,7 +99,7 @@ const Button = styled.button`
   @media ${device.mobile} {
     box-shadow: 0 13px 20px 0 rgba(118, 196, 125, 0.41);
     background: #66BB6A;
-    font-family: Chivo-Regular;
+    font-family: 'Chivo', sans-serif;
     font-size: 18px;
     color: #FFFFFF;
     text-align: center;
