@@ -142,7 +142,7 @@ const PhotosContainer = styled.div`
     flex-direction: column;
     justify-content: space-between;
     margin-top: 94px;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
   }
   @media ${device.tablet} {
   }
@@ -154,8 +154,8 @@ const PhotosContainer = styled.div`
 const PhotoItem = styled.div`
   @media ${device.mobile} {
     position: relative;
+    width: 100%;
     /* width: 512px; */
-    width: 512px;
     height: 416px;
 
     border-radius: 5px;
@@ -167,8 +167,8 @@ const PhotoItem = styled.div`
       margin-bottom: 50px;
     }
   }
-  @media ${device.tablet} {
-    /* width: 512px; */
+  @media ${device.ThirdSectionImageSize} {
+    width: 512px;
   }
   @media ${device.laptop} {
     :first-child {
@@ -184,8 +184,8 @@ const Text = styled.div`
     flex-direction: column;
     z-index: 3;
     position: relative;
-    /* bottom: 820px; */
     padding-left: 67px;
+    
 
     /* border: solid black; */
 
@@ -410,9 +410,12 @@ const Button = styled.button`
 
 const HowItWorksBanner = styled.div`
   @media ${device.mobile} {
+    /* white-space: pre-line; */
     background-color: #66BB6A;
     border-radius: 5px;
-    padding-top: 50px;
+    padding: 60px 0px 60px 0px;
+
+    /* height: 100%; */
     H2 {
       font-family: 'Chivo', sans-serif;
       font-weight: bold;
@@ -439,12 +442,12 @@ const HowItWorksBanner = styled.div`
     }
   }
   @media ${device.mobileL} {
-    margin: 117px 30px 0px;
+    margin: 117px 0px 0px;
     height: 720px;
     
     display: flex;
     flex-direction: column;
-    padding: 103px 30px 0 30px;
+    padding: 100px 30px 0 30px;
   }
   @media ${device.tablet} {
   }
