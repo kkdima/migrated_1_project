@@ -4,7 +4,6 @@ import '../../styles/styles.scss';
 import { device } from '../../theme/GlobalStyle';
 import photobox1 from '../../images/photobox1.png';
 import photobox2 from '../../images/photobox2.png';
-import backgroundImg from '../../images/background_third_section.png';
 
 export default () => (
     <ThirdSectionContainer>
@@ -140,7 +139,7 @@ const PhotosContainer = styled.div`
   @media ${device.mobile} {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 94px;
     margin-bottom: 60px;
   }
