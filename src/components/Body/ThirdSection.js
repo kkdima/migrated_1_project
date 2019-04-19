@@ -104,7 +104,6 @@ const ThirdSectionContainer = styled.div`
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
-    /* border: solid black; */
   }
   @media ${device.tablet} {
   }
@@ -411,7 +410,6 @@ const HowItWorksBanner = styled.div`
   @media ${device.mobile} {
     /* white-space: pre-line; */
     background-color: #66BB6A;
-    border-radius: 5px;
     padding: 60px 0px 60px 0px;
 
     /* height: 100%; */
@@ -451,6 +449,7 @@ const HowItWorksBanner = styled.div`
   @media ${device.tablet} {
   }
   @media ${device.laptop} {
+    border-radius: 5px;
     margin: 117px 0px 0px;
     max-width: 1200px;
     P:first-of-type {

@@ -1,33 +1,32 @@
-import React from 'react'
-import { device } from '../../theme/GlobalStyle';
+import React from 'react';
 import styled from 'styled-components';
+import { device } from '../../theme/GlobalStyle';
 
-const User = (props) => <InvestorBoxWrapper>
-<InvestorBox>
-  <WithAva>
-    <Img src={'https://api.adorable.io/avatars/75/abott@adorable.png'}/>
-    <WithAvaH3>
-      <H3>
-      {props.name}
-      </H3>
-      <H3>
-      {props.email}
-      </H3>
-    </WithAvaH3>
-  </WithAva>
-  <P>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae</P>
-</InvestorBox>
-</InvestorBoxWrapper>
+const User = (props) =>
+    <InvestorBoxWrapper>
+        <InvestorBox>
+            <WithAva>
+                <Img src="https://api.adorable.io/avatars/75/abott@adorable.png"/>
+                <WithAvaH3>
+                    <H3>
+                        {props.name}
+                    </H3>
+                    <H3>
+                        {props.email}
+                    </H3>
+                </WithAvaH3>
+            </WithAva>
+            <P>{props.company.catchPhrase} {props.company.bs}</P>
+        </InvestorBox>
+    </InvestorBoxWrapper>;
 
-export default User
-
-
+export default User;
 
 export const InvestorBoxWrapper = styled.div`
   @media ${device.mobile} {
     display: inline-flex;
     flex-direction: row;
-    margin-bottom: 40px;
+    margin-bottom: 56px;
     position: relative;
   }
   @media ${device.tablet} {
@@ -35,7 +34,7 @@ export const InvestorBoxWrapper = styled.div`
   @media ${device.laptop} {
     flex-direction: row;
   }
-`
+`;
 
 export const Img = styled.img`
   @media ${device.mobile} {
@@ -44,9 +43,11 @@ export const Img = styled.img`
   }
   @media ${device.laptop} {
   }
-`
+`;
 
-export const WithAvaH3 = styled.div``
+export const WithAvaH3 = styled.div`
+  margin-top: 20px;
+`;
 
 export const WithAva = styled.div`
   @media ${device.mobile} {
@@ -64,7 +65,8 @@ export const WithAva = styled.div`
   }
   @media ${device.laptop} {
   }
-`
+`;
+
 export const H3 = styled.h3`
   @media ${device.mobile} {
     white-space: pre;
@@ -72,20 +74,22 @@ export const H3 = styled.h3`
     font-size: 18px;
     color: #263238;
     line-height: 24px;
+    margin-bottom: 1em;
   }
   @media ${device.tablet} {
   }
   @media ${device.laptop} {
   }
-`
+`;
 export const P = styled.p`
   @media ${device.mobile} {
+    margin-top: 27px;
   }
   @media ${device.tablet} {
   }
   @media ${device.laptop} {
   }
-`
+`;
 
 export const InvestorBox = styled.div`
   @media ${device.mobile} {
@@ -97,7 +101,7 @@ export const InvestorBox = styled.div`
     box-shadow: -1px 13px 20px 0px #F0F2F4;
     font-size: 18px;
     line-height: 32px;
-    font-family: Chivo-Regular;
+    font-family: 'Chivo', sans-serif;
     color: #324148;
     H3:first-of-type {
       color: #66BB6A;
@@ -105,7 +109,8 @@ export const InvestorBox = styled.div`
     }
     H3 {
       width: 200px;
-      font-family: Chivo-Bold;
+      font-family: 'Chivo', sans-serif;
+      font-weight: bold;
       font-size: 18px;
       line-height: 24px;
     }
@@ -118,5 +123,5 @@ export const InvestorBox = styled.div`
   }
   @media ${device.laptop} {
   }
-`
-export const Span = styled.span``
+`;
+export const Span = styled.span``;

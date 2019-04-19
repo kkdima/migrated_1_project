@@ -25,7 +25,7 @@
         "starter",
         "boilerplate"
     ],
-    "homepage": "https://kkdima.github.io/migrated_1_project/",
+    "homepage": "https://github.com/leonardomso/react-bolt#readme",
     "author": "Leonardo Maldonado <leonardomso11@gmail.com>",
     "license": "MIT",
     "repository": {
@@ -35,16 +35,15 @@
     "bugs": {
         "url": "https://github.com/leonardomso/react-bolt/issues"
     },
-    "homepage": "https://github.com/leonardomso/react-bolt#readme",
     "devDependencies": {
-        "@babel/cli": "^7.2.3",
-        "@babel/core": "^7.2.2",
+        "@babel/cli": "^7.4.3",
+        "@babel/core": "^7.4.3",
         "@babel/node": "^7.2.2",
         "@babel/plugin-proposal-class-properties": "^7.3.0",
         "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
         "@babel/plugin-syntax-dynamic-import": "^7.2.0",
         "@babel/plugin-syntax-import-meta": "^7.2.0",
-        "@babel/plugin-transform-async-to-generator": "^7.2.0",
+        "@babel/plugin-transform-async-to-generator": "^7.4.0",
         "@babel/plugin-transform-runtime": "^7.2.0",
         "@babel/preset-env": "^7.3.1",
         "@babel/preset-react": "^7.0.0",
@@ -52,7 +51,7 @@
         "@babel/runtime": "^7.3.1",
         "babel-core": "^7.0.0-bridge.0",
         "babel-eslint": "^10.0.1",
-        "babel-jest": "^24.0.0",
+        "babel-jest": "^24.7.1",
         "babel-loader": "^8.0.4",
         "clean-webpack-plugin": "^1.0.1",
         "css-loader": "^2.1.0",
@@ -85,7 +84,7 @@
         "url-loader": "^1.1.2",
         "webpack": "^4.29.6",
         "webpack-cli": "^3.2.0",
-        "webpack-dev-server": "^3.1.14",
+        "webpack-dev-server": "^3.3.1",
         "webpack-jarvis": "^0.3.2",
         "webpack-merge": "^4.1.5"
     },
@@ -93,9 +92,13 @@
         "core-js": "^3.0.0",
         "cross-env": "^5.2.0",
         "gh-pages": "^2.0.1",
+        "lodash": "^4.17.11",
+        "prop-types": "^15.7.2",
         "react": "^16.8.6",
         "react-redux": "^6.0.0",
         "react-router-dom": "^4.4.0-beta.6",
+        "react-slick": "^0.24.0",
+        "react-swipeable": "^5.2.0-alpha.2",
         "redux": "^4.0.1",
         "redux-thunk": "^2.3.0",
         "styled-components": "^4.2.0"

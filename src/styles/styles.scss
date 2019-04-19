@@ -18,6 +18,20 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
   font-family: 'Chivo', sans-serif;
 }
 
+// Carousel_Slick
+// Add spacing between images
+.slick-slide {
+  margin: 0 40px;
+}
+
+// Fix external margins
+.slick-list {
+  margin: 0 -40px;
+}
+.slick-slider {
+  overflow: hidden;
+}
+
 button,
   a {
     cursor: pointer;
@@ -103,14 +117,15 @@ button,
   }
 
   .fsInfo h1 {
-    font-family: Chivo-Bold;
+    font-family: 'Chivo', sans-serif;
+    font-weight: bold;
     font-size: 37px;
     color: #000000;
     line-height: 64px;
   }
 
   .fsInfo p {
-    font-family: Chivo-Regular;
+    font-family: 'Chivo', sans-serif;
     font-size: 18px;
     color: #263238;
     text-align: left;
@@ -121,7 +136,7 @@ button,
   .fsInfo button {
     box-shadow: 0 13px 20px 0 rgba(118, 196, 125, 0.41);
     background: #66BB6A;
-    font-family: Chivo-Regular;
+    font-family: 'Chivo', sans-serif;
     font-size: 18px;
     color: #FFFFFF;
     text-align: center;
