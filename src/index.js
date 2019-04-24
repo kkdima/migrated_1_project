@@ -1,62 +1,30 @@
-
-import React, { Component, Fragment } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import { createGlobalStyle } from 'styled-components';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Header from './components/Header/Header';
-import FirstSection from './components/Body/FirstSection';
-import SecondSection from './components/Body/SecondSection';
-import ThirdSection from './components/Body/ThirdSection';
-// import Carousel from './components/Body/Carousel';
-import CarouselNew from './components/Body/CarouselNew';
-import Footer from './components/Footer/Footer';
-import reset from './constants/css/reset';
+import Header from "./components/Home/Header";
+import Home from "./components/Home/Home";
+import Product from "./components/Product/Product";
+import Contact from "./components/Contact/Contact";
+import Team from "./components/Team/Team";
+import Blog from "./components/Blog/Blog";
 
-const GlobalStyle = createGlobalStyle`${reset}`;
+const App = () => 
+    <Router>
+        <div>
+            <Header />
+            <Switch>
+                <Route path="/" component={Home} exact />
+                <Route path="/product" component={Product} exact />
+                <Route path="/team" component={Team} exact />
+                <Route path="/blog" component={Blog} exact />
+                <Route path="/contact" component={Contact} exact />
+                {/* <Route component={Error} /> */}
+            </Switch>
+        </div>
+    </Router>;
 
-class Layout extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            users : []
-        };
-    };
-    
-    // eslint-disable-next-line react/sort-comp
-    loadUsers = () => {
-        fetch("https://jsonplaceholder.typicode.com/users")
-            .then(res => res.json())
-            .then(json => {
-                this.setState({
-                    users: json
-                });
-            });
-    }
-    
-    componentDidMount() {
-        this.loadUsers();
-    }
-
-    render () {
-        return (
-            <BrowserRouter>
-                <Fragment>
-                    <Header />
-                    <FirstSection />
-                    <SecondSection />
-                    <ThirdSection />
-                    {/* <Carousel users={this.state.users}/> */}
-                    <CarouselNew users={this.state.users}/>
-                    <Footer />
-                    <GlobalStyle />
-                </Fragment>
-            </BrowserRouter>
-        );
-    }
-}
-
-ReactDOM.render(<Layout/>, document.getElementById('root')
+ReactDOM.render(<App/>, document.getElementById('root')
 );
 
 module.hot.accept();

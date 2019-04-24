@@ -29,27 +29,22 @@ const FirstScreenContainer = styled.div`
 const Img = styled.img`
   @media ${device.mobile} {
     position: absolute;
-    width: 20%;
-    max-width: 160px;
     z-index: -1;
     margin-top: 500px;
     left: 0;
   }
   @media ${device.tablet} {
-    max-height: 580px;
-    height: 50%;
-    max-width: 160px;
-    width: 50%;
   }
   @media ${device.laptop} {
     margin-top: 450px;
   }
 `;
+
 const InfoBlock = styled.div`
   @media ${device.mobile} {
     display: flex;
     flex-direction: column;
-    margin-top: 70px;
+    margin-top: 40px;
     margin-left: 30px;
     margin-right: 30px;
   }
@@ -66,6 +61,7 @@ const InfoBlock = styled.div`
     max-width: 1200px;
   }
 `;
+
 const H1 = styled.h1`
   @media ${device.mobile} {
     font-family: 'Chivo', sans-serif;
@@ -93,6 +89,7 @@ const P = styled.p`
   @media ${device.laptop} {
   }
 `;
+
 const Button = styled.button`
   @media ${device.mobile} {
     box-shadow: 0 13px 20px 0 rgba(118, 196, 125, 0.41);
