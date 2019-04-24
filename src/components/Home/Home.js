@@ -52,5 +52,3 @@ class Layout extends Component {
 }
 
 export default Layout;
-
-module.hot.accept();
