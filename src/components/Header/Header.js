@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink} from 'react-router-dom';
 import { device } from '../../theme/GlobalStyle';
 import '../../styles/styles.scss';
 import MainIllustration from '../../images/MainIllustration.png';
@@ -7,22 +8,20 @@ import img from '../../images/logo.png';
 
 export default () => (
     <Container>
-        <Wrapper>
-            <LogoNavHolder>
-                <Logo src={img} id="logo"/>
-                <Ul>
-                    <Li><A ahref="#">Home</A></Li>
-                    <Li><A ahref="#">Product</A></Li>
-                    <Li><A ahref="#">Team</A></Li>
-                    <Li><A ahref="#">Blog</A></Li>
-                    <Li><A ahref="#">Contact</A></Li>
-                </Ul>
-            </LogoNavHolder>
-            <LogoNavHolder2>
-                <Button data-micron="bounce">Sign Up</Button>
-                <Img src={MainIllustration} id="illustration"></Img>
-            </LogoNavHolder2>
-        </Wrapper>
+        <LogoNavHolder>
+            <Logo src={img} id="logo"/>
+            <NavLinkWrapper>
+                <NavLink className="main-nav" activeClassName="main-nav-active" to="/" exact>Home</NavLink>
+                <NavLink className="main-nav" activeClassName="main-nav-active" to="/product" exact>Product</NavLink>
+                <NavLink className="main-nav" activeClassName="main-nav-active" to="/team" exact>Team</NavLink>
+                <NavLink className="main-nav" activeClassName="main-nav-active" to="/blog" exact>Blog</NavLink> 
+                <NavLink className="main-nav" activeClassName="main-nav-active" to="/contact" exact>Contact</NavLink>
+            </NavLinkWrapper>
+        </LogoNavHolder>
+        <LogoNavHolder2>
+            <Button data-micron="bounce">Sign Up</Button>
+            <Img src={MainIllustration} id="illustration"></Img>
+        </LogoNavHolder2>
     </Container>
 );
 
@@ -40,45 +39,104 @@ const Container = styled.div`
     align-items: flex-start;
     justify-content: space-between;
     font-family: 'Chivo', sans-serif;
-    /* font-size: 1.2em; */
     color: #000000;
   }
   @media ${device.tablet} {
   }
   @media ${device.laptop} {
-    font-size: 1em;
-    justify-content: center;
-  }
-`;
-
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  /* margin: 0 auto; */
-  /* align-items: space-between; */
-  @media ${device.laptop} {
-    justify-content: flex-start;
-
+    /* justify-content: center; */
   }
   `;
 
 const LogoNavHolder = styled.div`
-  display: flex;
-  align-items: flex-start;
-  max-width: 615px;
-  @media ${device.laptop} {
-    justify-content: center;
-    position: relative;
-    right: 300px;
-    }
+    display: flex;
+    align-items: flex-start;
+    /* max-width: 615px; */
+    @media ${device.laptop} {
+      padding-left: 50px;
+      justify-content: center;
+      /* border: solid black; */
+      /* position: relative; */
+      /* right: 300px; */
+      }
   `;
-
+  
 const LogoNavHolder2 = styled.div`
+    @media ${device.mobile} {
+    }
+    @media ${device.tablet} {
+    }
+    @media ${device.laptop} {
+    }
+`;
+
+const NavLinkWrapper = styled.div`
   @media ${device.mobile} {
+    display: flex;
+    margin: 30px 25px;
+    flex-direction: column;
+    text-transform: uppercase;
+    justify-content: flex-start;
+
+    a:nth-child(1) {
+      width: 49px;
+    }
+    a:nth-child(3) {
+      width: 48px;
+    }
+    a:nth-child(4) {
+      width: 43px;
+    }
+    a {
+      margin-right: 29px;
+      margin-bottom: 10px;
+      /* border: 1px solid black; */
+    }
   }
   @media ${device.tablet} {
+    margin: 30px 50px;
   }
   @media ${device.laptop} {
+    flex-direction: row;
+    text-transform: capitalize;
+    margin: 61px 0  0 117px;
+    a {
+      width: auto;
+    }
+    a:nth-child(1) {
+      width: 46px;
+    }
+    a:nth-child(2) {
+      width: 63px;
+    }
+    a:nth-child(3) {
+      width: 43px;
+    }
+    a:nth-child(4) {
+      width: 36px;
+    }
+    a:nth-child(5) {
+      width: 61px;
+    }
+
+    /* Changing contrast color of the buttons from Nav menu if resizing window */
+    @media (max-width: 1216px) {
+      a:nth-child(5) {
+        color: white;
+      }
+    }
+  
+    @media (max-width: 1142px) {
+      a:nth-child(4) {
+        color: white;
+      }
+    }
+  
+    @media (max-width: 1070px) {
+      a:nth-child(3) {
+        color: white;
+      }
+    }
   }
 `;
 
@@ -92,85 +150,11 @@ const Logo = styled.img`
   }
   @media ${device.laptop} {
     display: flex;
-    /* right: 0; */
-    /* margin-right: 117px; */
   }
-`;
-
-const Ul = styled.ul`
-  @media ${device.mobile} {
-    flex-direction: column;
-    margin-top: 37px;
-    position: relative;
-    left: 30px;
-  }
-  @media ${device.tablet} {
-    left: 50px;
-  }
-  @media ${device.laptop} {
-    display: flex;
-    flex-direction: row;
-    margin-top: 57px;
-    position: relative;
-    /* right: 100px; */
-  }
-`;
-
-const Li = styled.li`
-  @media ${device.mobile} {
-    list-style: none;
-    margin-bottom: 15px;
-    margin-right: 32px
-  }
-  @media ${device.tablet} {
-  }
-  @media ${device.laptop} {
-  }
-`;
-
-const A = styled.a`
-  @media ${device.mobile} {
-    position: relative;
-    text-decoration: none;
-    padding-bottom: 8px;
-    &:before,
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 2px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background-color: rgb(72, 189, 76);
-    }
-    &:before {
-      opacity: 0;
-      transform: translateY(- 8px);
-      transition: transform 0s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity 0s;
-    }
-    &:after {
-      opacity: 0;
-      transform: translateY(8px/2);
-      transition: transform .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity .2s;
-    }
-    &:hover,
-    &:focus {
-      &:before,
-      &:after {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      &:before {
-        transition: transform .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity .2s;
-      }
-      &:after {
-        transition: transform 0s .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity 0s .2s;
-      }
-    }
-  }
-  @media ${device.tablet} {
-  }
-  @media ${device.desktop} {
+  #logo {
+    display: none;
+    margin: 45px 10px 10px;
+    margin-right: 117px;
   }
 `;
 
@@ -186,18 +170,22 @@ const Button = styled.button`
     color: #F1F8E9;
     border-radius: 5px;
     background: none;
-    position: absolute;
-    margin: 20px 10% 10px 0;
-    margin-top: 25px;
-    right: 0%;
+    margin: 30px 30px 0px 0px;
+    /* position: absolute; */
+    /* margin: 20px 10% 10px 0; */
+    /* margin-top: 25px; */
+    /* right: 0%; */
   }
   @media ${device.tablet} {
-    /* order: 2; */
     height: 48px;
     width: 128px;
+    margin: 30px 30px 0px 0px;
   }
   @media ${device.laptop} {
+    position: absolute;
     margin-top: 45px;
+    right: 10%;
+
   }
 `;
 
@@ -206,20 +194,13 @@ const Img = styled.img`
   top: 0;
   right: 0;
   z-index: -1;
-  /* max-width: 660px; */
 
   #illustration {
     position: relative;
-    width: 55%;
+    /* width: 55%; */
     top: 0;
     right: 0;
     z-index: -1;
-  }
-
-  #logo {
-    display: none;
-    margin: 45px 10px 10px;
-    margin-right: 117px;
   }
 
   @media ${device.mobile} {
@@ -244,24 +225,3 @@ const Img = styled.img`
     }
   }
 `;
-
-// const HeaderContainer = styled.div`
-//   display: flex;
-//   align-items: flex-start;
-//   justify-content: space-between;
-//   font-family: Chivo;
-//   font-size: 1.2em;
-//   color: #000000;
-// `;
-
-// const LogoNavHolder = styled.div`
-//   display: flex;
-//   align-items: flex-start;
-// `;
-// const Logo = styled.img`
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   z-index: -1;
-//   max-width: 660px;
-// `;

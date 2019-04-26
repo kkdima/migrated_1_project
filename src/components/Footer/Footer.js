@@ -8,9 +8,7 @@ export default () => (
   
         <ContainerBanner>
             <H2>The future of <Span>Farm Investing</Span> is Zou</H2>
-            <ButtonWrapper>
-                <ButtonBanner href="#!" data-micron="bounce">Invest Now</ButtonBanner>
-            </ButtonWrapper>
+            <ButtonBanner href="#!" data-micron="bounce">Invest Now</ButtonBanner>
         </ContainerBanner>
 
         <FirstLevel>
@@ -63,8 +61,8 @@ export default () => (
 const ContainerBanner = styled.div`
   @media ${device.mobile} {
     width: 100%;
-    height: 296px;
-    max-height: 296px;
+    /* height: 296px; */
+    /* max-height: 296px; */
     background: #FFFFFF;
     box-shadow: -1px 25px 20px 0 #F2F2F2;
     font-family: Chivo-Bold;
@@ -75,22 +73,14 @@ const ContainerBanner = styled.div`
     margin: 184px 0px 126px 0px;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     border-radius: 5px;
-  }
-  @media ${device.tablet} {
-  }
-  @media ${device.laptop} {
-  }
-`;
-
-const ButtonWrapper = styled.div`
-  @media ${device.mobile} {
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 34px; 
+    padding: 92px 20px 79px;
+    /* border: solid black; */
+    button {
+      margin-top: 34px;
+    }
   }
   @media ${device.tablet} {
   }
@@ -153,11 +143,12 @@ const FooterContainer = styled.div`
     margin: 0 auto;
     justify-content: center;
     flex-direction: column;
-    padding: 0px 20px;
+    padding: 0px 25px;
   }
   @media ${device.tablet} {
   }
   @media ${device.laptop} {
+    padding: 0px 50px;
   }
 `;
 const FirstLevel = styled.div`
@@ -177,13 +168,11 @@ const FooterUls = styled.div`
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    padding: 0px 20px;
   }
   @media ${device.tablet} {
   }
   @media ${device.laptop} {
     width: 590px;
-    padding: 0px;
   }
 `;
 
@@ -235,7 +224,7 @@ const FooterGreenBox = styled.div`
     height: 258px;
     border-radius: 5px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 67px;
   }
   @media ${device.tablet} {
   }
@@ -291,12 +280,13 @@ const ThirdRow = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-top: 69px;
-    margin-bottom: 85px;
+    margin-top: 59px;
+    margin-bottom: 40px;
     P {
       font-family: 'Chivo', sans-serif;
       font-size: 14px;
       color: #607D8B;
+      margin-bottom: 5px;
     }
   }
   @media ${device.tablet} {
