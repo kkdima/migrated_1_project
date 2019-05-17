@@ -7,7 +7,6 @@ import FirstSection from './FirstSection';
 import SecondSection from './SecondSection';
 import ThirdSection from './ThirdSection';
 import CarouselNew from './CarouselNew';
-import Footer from './Footer';
 import reset from '../../constants/css/reset';
 
 const GlobalStyle = createGlobalStyle`${reset}`;
@@ -43,7 +42,6 @@ class Layout extends Component {
                     <SecondSection />
                     <ThirdSection />
                     <CarouselNew users={this.state.users}/>
-                    <Footer />
                     <GlobalStyle />
                 </Fragment>
             </BrowserRouter>

@@ -1,19 +1,46 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
+// import Modal from 'react-awesome-modal';
 import { device } from '../../theme/GlobalStyle';
 import '../../styles/styles.scss';
 import leaves from '../../images/Leaves.png';
+// import closebutton from '../../images/close-button.svg';
+import Popup from "../other_pages/Popup";
 
-export default () => (
-    <FirstScreenContainer>
-        <Img src={leaves} id="illustrationLeaves"/>
-        <InfoBlock>
-            <H1>A New Way to Invest in Agriculture</H1>
-            <P>Zou provides farmes, ranchers, private foresters, and agricultural producers with online self service applications and educational materials.</P>
-            <Button href="#!" data-micron="bounce">Invest Now</Button>
-        </InfoBlock>
-    </FirstScreenContainer>
-);
+// import '../../images/images';
+
+// export default () => (
+export default class FirstSection extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            visible : false
+        };
+    }
+      
+    openModal = () => {
+        this.setState({ visible : true });
+    };
+    
+    closeModal = () => {
+        this.setState({ visible : false });
+    };
+
+    render() {
+        return (
+            <FirstScreenContainer>
+                <Img src={leaves} id="illustrationLeaves"/>
+                <InfoBlock>
+                    <H1>A New Way to Invest in Agriculture</H1>
+                    <P>Zou provides farmes, ranchers, private foresters, and agricultural producers with online self service applications and educational materials.</P>
+                    <Button href="#!" data-micron="bounce" type="button" value="Open" onClick={this.openModal}>Invest Now</Button>
+                    <Popup visible={this.state.visible} handleClose={this.closeModal}/>
+                </InfoBlock>
+            </FirstScreenContainer>
+        );
+    }
+};
+// );
 
 const FirstScreenContainer = styled.div`
   @media ${device.mobile} {
@@ -66,6 +93,7 @@ const InfoBlock = styled.div`
     max-width: 1200px;
   }
 `;
+
 const H1 = styled.h1`
   @media ${device.mobile} {
     font-family: 'Chivo', sans-serif;
@@ -93,6 +121,7 @@ const P = styled.p`
   @media ${device.laptop} {
   }
 `;
+
 const Button = styled.button`
   @media ${device.mobile} {
     box-shadow: 0 13px 20px 0 rgba(118, 196, 125, 0.41);
@@ -113,5 +142,154 @@ const Button = styled.button`
   }
   @media ${device.laptop} {
     float: left;
+  }
+`;
+
+const Wrapper = styled.div`
+  @media ${device.mobile} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+  @media ${device.tablet} {
+  }
+  @media ${device.laptop} {
+  }
+`;
+
+const Title = styled.h1`
+  @media ${device.mobile} {
+    font-family: 'Chivo', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #141414;
+    margin: 12px 0 38px 0;
+    text-align: center;
+
+  }
+  @media ${device.tablet} {
+  }
+  @media ${device.laptop} {
+  }
+`;
+
+const Input = styled.input`
+  @media ${device.mobile} {
+    display: flex;
+    margin-bottom: 23px;
+  }
+  @media ${device.tablet} {
+  }
+  @media ${device.laptop} {
+  }
+`;
+
+const Form = styled.form`
+  input::placeholder {
+    color: #D6D6D6;
+  }
+  input {
+    padding-left: 15px;
+  }
+  input:nth-of-type(1) {
+    text-transform: capitalize;
+  }
+  input:nth-of-type(3) {
+    height: 142px;
+  }
+  input:nth-of-type(3):focus {
+    outline:none;
+  }
+  textarea {
+    border: none;
+    padding: 15px;
+    width: 405px;
+    height: 142px;
+    text-transform: capitalize;
+  }
+  textarea::placeholder {
+    color: #D6D6D6;
+  }
+  @media ${device.mobile} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 58px;
+  }
+  @media ${device.tablet} {
+  }
+  @media ${device.laptop} {
+  }
+`;
+
+const ButtonContainer = styled.div`
+  @media ${device.mobile} {
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: flex-end;
+  }
+  @media ${device.tablet} {
+  }
+  @media ${device.laptop} {
+  }
+  `;
+
+const A2 = styled.div`
+  Button {
+    margin-bottom: 58px;
+    margin-right: 0px;
+  }
+  Img {
+    height: 25px;
+  }
+  @media ${device.mobile} {
+    margin: 0 auto;
+    buttom: 250px;    
+  }
+  @media ${device.tablet} {
+  }
+  @media ${device.laptop} {
+  }
+  `;
+
+const Img2 = styled.img`
+  @media ${device.mobile} {
+    /* border: 1px solid black; */
+    height: 25px;
+    width: 25px;
+    margin-top: 0;
+    /* position: relative; */
+    /* left: 480px; */
+    /* bottom: 500px; */
+    /* z-index: 2; */
+  }
+  @media ${device.tablet} {
+  }
+  @media ${device.laptop} {
+  }
+`;
+
+const Button2 = styled.button`
+  @media ${device.mobile} {
+    /* border: 1px solid black; */
+    margin: 15px 18px 0 0;
+    /* left: 480px; */
+    /* bottom: 500px; */
+    /* position: relative; */
+
+    /* margin: 0; */
+    /* height: 25px; */
+    /* width: 25px; */
+    /* margin-top: 10px; */
+
+    /* background: none; */
+    /* display: inline-block; */
+    /* background: yellow; */
+  }
+  
+  @media ${device.tablet} {
+  }
+  @media ${device.laptop} {
   }
 `;

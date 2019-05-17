@@ -1,29 +1,50 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { NavLink} from 'react-router-dom';
 import { device } from '../../theme/GlobalStyle';
 import '../../styles/styles.scss';
 import MainIllustration from '../../images/MainIllustration.png';
 import img from '../../images/logo.png';
+import Popup from "../other_pages/Popup";
 
-export default () => (
-    <Container>
-        <LogoNavHolder>
-            <Logo src={img} id="logo"/>
-            <NavLinkWrapper>
-                <NavLink className="main-nav" activeClassName="main-nav-active" to="/" exact>Home</NavLink>
-                <NavLink className="main-nav" activeClassName="main-nav-active" to="/product" exact>Product</NavLink>
-                <NavLink className="main-nav" activeClassName="main-nav-active" to="/team" exact>Team</NavLink>
-                <NavLink className="main-nav" activeClassName="main-nav-active" to="/blog" exact>Blog</NavLink> 
-                <NavLink className="main-nav" activeClassName="main-nav-active" to="/contact" exact>Contact</NavLink>
-            </NavLinkWrapper>
-        </LogoNavHolder>
-        <LogoNavHolder2>
-            <Button data-micron="bounce">Sign Up</Button>
-            <Img src={MainIllustration} id="illustration"></Img>
-        </LogoNavHolder2>
-    </Container>
-);
+export default class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            visible : false
+        };
+    }
+      
+    openModal = () => {
+        this.setState({ visible : true });
+    };
+    
+    closeModal = () => {
+        this.setState({ visible : false });
+    };
+
+    render() {
+        return (
+            <Container>
+                <LogoNavHolder>
+                    <Logo src={img} id="logo"/>
+                    <NavLinkWrapper>
+                        <NavLink className="main-nav" activeClassName="main-nav-active" to="/" exact>Home</NavLink>
+                        <NavLink className="main-nav" activeClassName="main-nav-active" to="/product" exact>Product</NavLink>
+                        <NavLink className="main-nav" activeClassName="main-nav-active" to="/team" exact>Team</NavLink>
+                        <NavLink className="main-nav" activeClassName="main-nav-active" to="/blog" exact>Blog</NavLink> 
+                        <NavLink className="main-nav" activeClassName="main-nav-active" to="/contact" exact>Contact</NavLink>
+                    </NavLinkWrapper>
+                </LogoNavHolder>
+                <LogoNavHolder2>
+                    <Button data-micron="bounce" type="button" value="Open" onClick={this.openModal}>Sign Up</Button>
+                    <Img src={MainIllustration} id="illustration"></Img>
+                    <Popup visible={this.state.visible} handleClose={this.closeModal}/>
+                </LogoNavHolder2>
+            </Container>
+        );
+    }
+}
 
 // STYLES STYLES STYLES STYLES STYLES STYLES :
 // STYLES STYLES STYLES STYLES STYLES STYLES :

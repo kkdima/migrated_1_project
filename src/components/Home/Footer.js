@@ -1,56 +1,77 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import img from '../../images/logo.png';
 import { device } from '../../theme/GlobalStyle';
+import Popup from "../other_pages/Popup";
 
-export default () => (
-    <FooterContainer>
+export default class Footer extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            visible : false
+        };
+    }
+    
+  openModal = () => {
+      this.setState({ visible : true });
+  };
   
-        <ContainerBanner>
-            <H2>The future of <Span>Farm Investing</Span> is Zou</H2>
-            <ButtonBanner href="#!" data-micron="bounce">Invest Now</ButtonBanner>
-        </ContainerBanner>
+  closeModal = () => {
+      this.setState({ visible : false });
+  };
 
-        <FirstLevel>
-            <FooterUls>
-                <Ul>
-                    <Li>Company</Li>
-                    <Li><A>About Us</A></Li>
-                    <Li><A>Team</A></Li>
-                    <Li><A>Careers</A></Li>
-                    <Li><A>Contact</A></Li>
-                </Ul>
-                <Ul>
-                    <Li>Invest</Li>
-                    <Li><A>Features</A></Li>
-                    <Li><A>How It Works</A></Li>
-                    <Li><A>Pricing</A></Li>
-                    <Li><A>Login</A></Li>
-                </Ul>
-                <Ul>
-                    <Li>Legal</Li>
-                    <Li><A>Privacy</A></Li>
-                    <Li><A>Terms</A></Li>
-                    <Li><A>Security</A></Li>
-                </Ul>
-            </FooterUls>
-            <FooterGreenBox>
-                <P>Blog Zou</P>
-                <P>Write email to us</P>
-                <P>info@zoufarm.com</P>
-                <Button data-micron="bounce">Sign Up</Button>
-            </FooterGreenBox>
-        </FirstLevel>
+  render() {
+      return (
+          <FooterContainer>
+  
+              <ContainerBanner>
+                  <H2>The future of <Span>Farm Investing</Span> is Zou</H2>
+                  <ButtonBanner href="#!" data-micron="bounce" type="button" value="Open" onClick={this.openModal}>Invest Now</ButtonBanner>
+                  <Popup visible={this.state.visible} handleClose={this.closeModal}/>
+              </ContainerBanner>
 
-        <Line></Line>
+              <FirstLevel>
+                  <FooterUls>
+                      <Ul>
+                          <Li>Company</Li>
+                          <Li><A>About Us</A></Li>
+                          <Li><A>Team</A></Li>
+                          <Li><A>Careers</A></Li>
+                          <Li><A>Contact</A></Li>
+                      </Ul>
+                      <Ul>
+                          <Li>Invest</Li>
+                          <Li><A>Features</A></Li>
+                          <Li><A>How It Works</A></Li>
+                          <Li><A>Pricing</A></Li>
+                          <Li><A>Login</A></Li>
+                      </Ul>
+                      <Ul>
+                          <Li>Legal</Li>
+                          <Li><A>Privacy</A></Li>
+                          <Li><A>Terms</A></Li>
+                          <Li><A>Security</A></Li>
+                      </Ul>
+                  </FooterUls>
+                  <FooterGreenBox>
+                      <P>Blog Zou</P>
+                      <P>Write email to us</P>
+                      <P>info@zoufarm.com</P>
+                      <Button data-micron="bounce" type="button" value="Open" onClick={this.openModal}>Sign Up</Button>
+                  </FooterGreenBox>
+              </FirstLevel>
 
-        <ThirdRow>
-            <Img src={img} id="logo"></Img>
-            <P>© Copyright 2018. kkdimaa.</P>
-        </ThirdRow>
+              <Line></Line>
 
-    </FooterContainer>
-);
+              <ThirdRow>
+                  <Img src={img} id="logo"></Img>
+                  <P>© Copyright 2018. kkdimaa.</P>
+              </ThirdRow>
+
+          </FooterContainer>
+      );
+  }
+}
 
 // STYLES STYLES STYLES STYLES STYLES STYLES :
 // STYLES STYLES STYLES STYLES STYLES STYLES :
