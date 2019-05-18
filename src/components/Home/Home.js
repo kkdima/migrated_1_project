@@ -36,7 +36,7 @@ class Layout extends Component {
 
     render () {
         return (
-            <BrowserRouter>
+            <BrowserRouter basename="migrated_1_project/">
                 <Fragment>
                     <FirstSection />
                     <SecondSection />
