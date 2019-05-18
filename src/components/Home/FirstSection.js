@@ -29,7 +29,7 @@ export default class FirstSection extends Component {
     render() {
         return (
             <FirstScreenContainer>
-                <Img src={leaves} id="illustrationLeaves"/>
+                <Img src={`/{leaves}`} id="illustrationLeaves"/>
                 <InfoBlock>
                     <H1>A New Way to Invest in Agriculture</H1>
                     <P>Zou provides farmes, ranchers, private foresters, and agricultural producers with online self service applications and educational materials.</P>
