@@ -110,6 +110,10 @@ const Input = styled.input`
   @media ${device.mobile} {
     display: flex;
     margin-bottom: 23px;
+    -webkit-appearance: none;
+    border-style: solid;
+    border:none;
+    
   }
   @media ${device.tablet} {
   }
@@ -156,6 +160,8 @@ const Form = styled.form`
 `;
 
 const ButtonContainer = styled.div`
+  border-style: solid;
+  border:none;  
   @media ${device.mobile} {
     /* border: 1px solid blue; */
     display: flex;

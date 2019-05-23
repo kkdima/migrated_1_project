@@ -1,6 +1,7 @@
 {
     "name": "react-bolt",
     "version": "1.0.0",
+    "homepage": "https://kkdima.github.io/migrated_1_project",
     "description": "⚡ The most simple & robust boilerplate for your React projects.",
     "main": "src/index.js",
     "scripts": {
@@ -25,7 +26,6 @@
         "starter",
         "boilerplate"
     ],
-    "homepage": "https://github.com/leonardomso/react-bolt#readme",
     "author": "Leonardo Maldonado <leonardomso11@gmail.com>",
     "license": "MIT",
     "repository": {

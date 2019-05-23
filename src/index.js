@@ -11,11 +11,11 @@ import Product from "./components/other_pages/Product";
 // import Blog from "./components/Blog/Blog";
 
 const App = () => 
-    <Router>
+    <Router >
         <div>
             <Header />
             <Switch>
-                <Route path="/" component={Home} exact />
+                <Route path="/" component={Home} />
                 <Route path="/product" component={Product} exact />
                 {/* <Route path="/team" component={Team} exact /> */}
                 {/* <Route path="/blog" component={Blog} exact /> */}

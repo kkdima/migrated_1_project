@@ -36,7 +36,7 @@ class Layout extends Component {
 
     render () {
         return (
-            <BrowserRouter basename="{process.env.PUBLIC_URL}">
+            <BrowserRouter>
                 <Fragment>
                     <FirstSection />
                     <SecondSection />

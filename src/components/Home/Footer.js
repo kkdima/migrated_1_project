@@ -25,7 +25,7 @@ export default class Footer extends Component {
           <FooterContainer>
   
               <ContainerBanner>
-                  <H2>The future of <Span>Farm Investing</Span> is Zou</H2>
+                  <H2>The future of <Span>Farm Investing</Span> is Zou.</H2>
                   <ButtonBanner href="#!" data-micron="bounce" type="button" value="Open" onClick={this.openModal}>Invest Now</ButtonBanner>
                   <Popup visible={this.state.visible} handleClose={this.closeModal}/>
               </ContainerBanner>
